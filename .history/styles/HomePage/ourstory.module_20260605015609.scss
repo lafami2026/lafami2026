@@ -1,0 +1,277 @@
+.ourstory {
+  width: 100%;
+  height: auto;
+  padding: 7rem 0 5rem;
+}
+
+.os__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.osw__top {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.osw__h3 {
+  font-family: var(--garamond-font);
+  color: var(--purple);
+  font-size: calc(var(--70-font-size) + 0.5rem);
+  font-weight: 200;
+}
+
+.osw__p,
+.p__quote {
+  letter-spacing: 1%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.os__box {
+  width: 100%;
+  height: auto;
+  padding: 2rem 2.5rem 2.5rem;
+  border: 1px solid #6f20e1;
+  background-color: var(--lightpurple);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.osb__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.os__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.p__name {
+  font-family: var(--bold-font);
+  color: black;
+  font-size: calc(var(--normal-font-size) + 0.2rem);
+}
+
+.osw__ps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bold {
+  font-family: var(--bold-font);
+  color: black;
+}
+
+//Gifts
+.gifts__section {
+  width: 100%;
+  height: auto;
+  padding: 7rem 0 5rem;
+}
+
+.click {
+  color: var(--purple);
+  text-decoration: underline;
+  font-family: var(--bold-font);
+}
+
+.qrcode {
+  width: 400px;
+  height: auto;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+//Form Modal Success
+.form__modal {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.fm__wrap {
+  padding: 2.5rem 2rem;
+  background-color: white;
+  position: absolute;
+  width: 460px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  border-radius: 16px;
+  // border: 1px solid #6f20e1;
+}
+
+.fm__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.mo__span {
+  font-weight: 200;
+  font-family: var(--medium-font);
+  color: black;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.mo__span2 {
+  font-weight: 200;
+  text-align: center;
+}
+
+.imagerm {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.cancel {
+  width: 28px;
+  height: auto;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+    // path {
+    //   stroke: black;
+    // }
+  }
+}
+
+//RESPONSIVE DESIGN
+@media screen and (max-width: 1300px) {
+  .os__wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ourstory {
+    padding: 5rem 0 3.5rem;
+  }
+
+  .gifts__section {
+    padding: 5rem 0 3.5rem;
+  }
+
+  .os__wrapper {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .os__wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .os__wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .os__wrapper {
+    width: 90%;
+  }
+
+  .os__box {
+    width: 100%;
+    padding: 1.5rem 2rem 2rem;
+    border-radius: 8px;
+    gap: 1.5rem;
+  }
+
+  .os__image {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .os__wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .os__wrapper {
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .os__box {
+    width: 100%;
+    padding: 1.3rem 1.3rem 1.5rem;
+    border-radius: 6px;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .osw__top {
+    gap: 2rem;
+  }
+
+  .osw__ps {
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .qrcode {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .qrcode {
+    width: 85%;
+  }
+}

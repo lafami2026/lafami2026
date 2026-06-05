@@ -1,0 +1,240 @@
+.rsvp {
+  width: 100%;
+  height: auto;
+  padding: 6rem 0 5rem;
+  background-color: var(--lightpurple);
+}
+
+.rsvp__wrapper {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.osw__h3 {
+  font-family: var(--garamond-font);
+  color: var(--purple);
+  font-size: calc(var(--70-font-size) + 0.5rem);
+  font-weight: 200;
+}
+
+.contact {
+  width: 100%;
+}
+
+.formWrapper {
+  width: 100%;
+  height: auto;
+}
+
+.form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.attending {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--purple); // changes the selected dot color
+  }
+}
+
+.label {
+  font-size: calc(var(--normal-font-size) - 0.1rem);
+  font-family: var(--normal-font);
+  letter-spacing: 2%;
+}
+
+.ticking {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: black;
+}
+
+.ticker {
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--purple);
+  background-color: white;
+  cursor: pointer;
+}
+
+.tick {
+  width: 16px;
+  height: 16px;
+  background-color: var(--purple);
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.error {
+  font-size: calc(var(--normal-font-size) - 0.125rem);
+  color: rgb(255, 0, 0);
+  margin-top: -0.2rem;
+}
+
+.button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 50px;
+  margin-top: 2rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.svg {
+  width: 24px;
+  height: auto;
+  margin-top: 0.25rem;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    path {
+      fill: white;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+//Password Gate
+.password__wrap{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.psvg{
+  width: 50px;
+  height: auto;
+
+  svg{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.in__h3{
+  font-size: var(--30-font-size);
+  font-family: var(--medium-font);
+  font-weight: 200;
+  color: black;
+  margin-top: 0.5rem;
+}
+
+.in__p{
+  letter-spacing: 1%;
+}
+
+.former{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pass__wrap{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem
+}
+
+.pass__eye{
+  width: 100%;
+  position: relative;
+}
+
+.form__in {
+  width: 100%;
+  height: 60px;
+  outline: none;
+  background-color: white !important;
+  padding: 0 0 0 1.25rem;
+  border: none;
+  color: black;
+  border-radius: 8px;
+
+  &:focus {
+    border: 1px solid #6f20e1;
+  }
+
+  &:invalid[data-focused="true"] {
+    border: 1px solid red;
+  }
+
+  &:invalid[data-focused="true"] ~ .error {
+    display: block;
+  }
+}
+
+.label {
+  font-size: calc(var(--normal-font-size) - 0.1rem);
+  text-transform: capitalize;
+  font-family: var(--normal-font);
+  letter-spacing: 2%;
+}
+
+.pass__but{
+  width: 100%;
+  background-color: var(--purple);
+  color: white;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.eye{
+  position: absolute;
+  top: 55%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  svg{
+    width: 24px;
+    height: auto;
+  }
+}

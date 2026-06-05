@@ -1,0 +1,41 @@
+"use client";
+
+import React, { useEffect } from "react";
+import Lenis from "lenis";
+import HeroSection from "./HeroSection";
+import HomeInvite from "./HomeInvite";
+import HomeBlue from "./HomeBlue";
+import StoryImage from "./StoryImage";
+import OurStory from "./OurStory";
+import Marquee from "./Marquee";
+import RoundImage from "./RoundImage";
+
+const HomePageWrapper = () => {
+  //Smooth Scroll
+  useEffect(() => {
+    const lenisInstance = new Lenis({
+      duration: 1.2,
+    });
+
+    function raf(time: number) {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  return (
+    <>
+      <HeroSection />
+      <HomeInvite />
+      <HomeBlue />
+      <StoryImage image="DSC09793_jb6afq.jpg"/>
+      <OurStory/>
+      <Marquee/>
+      <RoundImage image="https://res.cloudinary.com/dftfczsxp/image/upload/v1780215868/DSC09890_m4kh1w.jpg"/>
+    </>
+  );
+};
+
+export default HomePageWrapper;

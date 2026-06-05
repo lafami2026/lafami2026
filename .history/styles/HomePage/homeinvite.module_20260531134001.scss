@@ -1,0 +1,59 @@
+.invite__section{
+  width: 100%;
+  height: auto;
+  padding: 7rem 0 !important;
+}
+
+.invite__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.iw__top{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.iw__span{
+  font-family: var(--bold-font);
+  color: black;
+  font-size: calc(var(--normal-font-size) - 0.3rem);
+  text-transform: uppercase;
+  letter-spacing: 20%;
+}
+
+.iw__h3{
+  font-family: var(--garamond-font);
+  color: var(--purple);
+  font-size: calc(var(--70-font-size) + 0.5rem);
+  font-weight: 200;
+}
+
+.iw__mid{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iw__p{
+  line-height: 1.4;
+  text-align: center;
+}
+
+.bold{
+  font-family: var(--bold-font);
+  color: black;
+}
+
+.iw__bottom{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  
+}

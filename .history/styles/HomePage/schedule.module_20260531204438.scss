@@ -1,0 +1,71 @@
+.schedule {
+  width: 100%;
+  height: auto;
+  padding: 7rem 0 5rem;
+}
+
+.ss__wrapper {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.osw__h3 {
+  font-family: var(--garamond-font);
+  color: var(--purple);
+  font-size: calc(var(--70-font-size) + 0.5rem);
+  font-weight: 200;
+}
+
+.ssw__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.ssw__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stop__one {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: var(--lightpurple);
+}
+
+.love__circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+}
+
+.svgone {
+  width: 24px;
+  height: auto;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    path {
+      fill: var(--purple);
+    }
+  }
+}

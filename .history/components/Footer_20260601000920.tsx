@@ -1,0 +1,35 @@
+import React from "react";
+import { CldImage } from "next-cloudinary";
+import styles from "../styles/HomePage/footer.module.scss";
+
+const Footer = () => {
+  return (
+    <div className={styles.footer}>
+      <div className={styles.footer__content}>
+        <div className={styles.image__svg}>
+          <svg
+            width="40"
+            height="36"
+            viewBox="0 0 40 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M36.6116 3.38924C35.5489 2.30996 34.2868 1.4561 32.9003 0.874206C31.5138 0.292316 30.0296 -0.00368073 28.5344 3.45445e-05C27.0373 -0.00208103 25.5606 0.294999 24.1835 0.881769C22.8084 1.4647 21.5626 2.3213 20.5216 3.40138L19.8879 4.07619L19.2389 3.42652C17.0888 1.26953 14.193 0.0585244 11.1854 0.0618399C8.17777 0.0651554 5.30334 1.2776 3.19658 3.43935C1.11931 5.61409 -0.0300235 8.53828 0.000596497 11.58C0.0312165 14.6217 1.23534 17.5448 3.35485 19.7149L19.0219 35.4901C19.3484 35.816 19.787 35.9993 20.2429 36C20.6987 36.0007 21.1325 35.8154 21.4517 35.4901L36.8136 19.6925C38.8918 17.511 40.0355 14.579 39.9992 11.5295C39.96 8.48086 38.7435 5.55855 36.6096 3.39308L36.6116 3.38924Z"
+              fill="#4B2183"
+            />
+            <CldImage
+              fill
+              quality={100}
+              src="DSC09943_gib6mo.jpg"
+              sizes="100vw"
+              alt="La FaMi"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

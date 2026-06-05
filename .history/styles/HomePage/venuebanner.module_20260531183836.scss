@@ -1,0 +1,70 @@
+.vb__section{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.vbslider__container{
+  width: 100%;
+  padding: 2rem 0 2rem;
+  background-color: var(--purple);
+}
+
+.vb__slider{
+  width: max-content;
+  position: relative;
+  display: flex;
+}
+
+.vslider__main{
+  display: flex;
+  
+  .vslider__space{
+    width: 1rem;
+    height: 1rem;
+    display: block;
+  }
+}
+
+.vslider__content{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-family: var(--regular-font);
+  font-size: calc(var(--20-font-size) - 0.2rem);
+  color: white;
+}
+
+.vfirst__slide{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  p{
+    fo
+  }
+
+  .vspan__button{
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color:white;
+  }
+}
+
+//Responsive Design
+@media screen and (max-width: 650px) {
+  .vbslider__container{
+    padding: 1.3rem 0 1.4rem;
+  }
+
+  .vfirst__slide{
+    .vspan__button{
+      width: 0.35rem;
+      height: 0.35rem;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+"use client";
+
+import React, {RefObject} from "react";
+import Love from "@/utils/Icons/Love";
+import styles from "../styles/HomePage/homeblue.module.scss";
+import CountDown from "./CountDown";
+
+const HomeBlue = ({
+  dref,
+
+}: {
+  mref: RefObject<HTMLDivElement | null>;
+}) => {
+  const dayDate = [
+    {
+      day: "SUN",
+      date: "21",
+    },
+    {
+      day: "MON",
+      date: "22",
+    },
+    {
+      day: "TUE",
+      date: "23",
+    },
+    {
+      day: "WED",
+      date: "24",
+    },
+    {
+      day: "THU",
+      date: "25",
+    },
+    {
+      day: "FRI",
+      date: "26",
+    },
+  ];
+
+  return (
+    <div className={styles.homeblue}>
+      <div className={`container ${styles.hb__container}`}>
+        <div className={styles.hb__wrapper}>
+          <div className={styles.hb__calendar}>
+            <div className={styles.iw__top}>
+              <span className={styles.iw__span}>DATE</span>
+              <h3 className={styles.iw__h3}>June 2026</h3>
+            </div>
+            <div className={styles.calendar}>
+              {/* {dayDate.map((data, i) => (
+                <div className={styles.date__day} key={i}>
+                  <span className={styles.day}>{data.day}</span>
+                  <span className={styles.date}>{data.date}</span>
+                </div>
+              ))} */}
+              <div className={styles.date__day}>
+                <span className={styles.day}>WED</span>
+                <span className={styles.date}>24</span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>THU</span>
+                <span className={styles.date}>25</span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>FRI</span>
+                <span className={styles.date}>26</span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>SAT</span>
+                <span className={styles.date}>
+                  <span className={styles.twenty}>27</span>
+                  <span className={styles.love}>
+                    <Love />
+                  </span>
+                </span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>SUN</span>
+                <span className={styles.date}>28</span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>MON</span>
+                <span className={styles.date}>29</span>
+              </div>
+              <div className={styles.date__day}>
+                <span className={styles.day}>TUE</span>
+                <span className={styles.date}>30</span>
+              </div>
+            </div>
+          </div>
+          <div className={styles.iw__top}>
+            <span className={styles.iw__span}>Location</span>
+            <h3 className={styles.iw__h3}>Yaounde, Cameroon</h3>
+          </div>
+          <div className={styles.iw__top2}>
+            <span className={styles.iw__span}>Countdown</span>
+            <CountDown />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomeBlue;

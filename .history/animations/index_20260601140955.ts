@@ -1,0 +1,16 @@
+const transition = { duration: 0.6, ease: [0.7, 0, 0.3, 1]};
+
+
+export const rsvpAnim = {
+  initial: {
+    opacity: "0dvh",
+  },
+  entry: {
+    opacity: "100dvh",
+    transition: transition,
+  },
+  exit: {
+    opacity: "0dvh",
+    transition: transition,
+  },
+};

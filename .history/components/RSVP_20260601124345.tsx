@@ -1,0 +1,21 @@
+import React from "react";
+import RSVPBox from "./RSVPBox";
+import PasswordGate from "./PasswordGate";
+import styles from "../styles/HomePage/rsvp.module.scss";
+
+const RSVP = () => {
+  return (
+    <div className={styles.rsvp}>
+      <div className={`container ${styles.rsvp__container}`}>
+        <div className={styles.rsvp__wrapper}>
+          <h3 className={styles.osw__h3}>RSVP</h3>
+          <div className={styles.contact}>
+            <RSVPBox />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RSVP;

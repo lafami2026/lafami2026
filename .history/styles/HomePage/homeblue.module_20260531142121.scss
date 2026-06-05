@@ -1,0 +1,15 @@
+.homeblue{
+  width: 100%;
+  height: auto;
+  padding: 7rem 0;
+  background: var(--lightpurple);
+}
+
+.hb__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: rem;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
