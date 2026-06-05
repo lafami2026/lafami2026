@@ -28,9 +28,8 @@ const corsiva = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "La FaMi - 27.06.2026",
-  description:
-    "Dear friends & family memebers, we’re so excited to share this special moment with you! As we begin our journey together, we’d love for you to join us in celebrating our big day. Here, you’ll find all the details you need - our story, event schedule, venue information, RSVP and more.",
+  title: "La FaMi 2026 -",
+  description: "We’re so excited to share this special moment with you! As we begin our journey together, we’d love for you to join us in celebrating our big day.",
 };
 
 export default function RootLayout({
