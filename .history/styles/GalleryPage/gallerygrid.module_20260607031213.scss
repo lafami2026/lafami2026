@@ -111,8 +111,8 @@
   max-height: 80vh;
 
   @media screen and (min-width: 1024px) {
-    width: auto !important;
-    height: auto !important;
+    width: max-content !important;
+    height: max-content !important;
   }
 }
 
