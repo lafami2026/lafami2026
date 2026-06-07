@@ -9,8 +9,8 @@ interface InviteOptions {
 
 export const generateInvite = async ({
   name,
-}: // guestName,
-InviteOptions): Promise<Uint8Array> => {
+  // guestName,
+}: InviteOptions): Promise<Uint8Array> => {
   const templatePath = path.join(process.cwd(), "public", "wedding-invite.pdf");
   const templateBytes: Buffer = fs.readFileSync(templatePath);
 

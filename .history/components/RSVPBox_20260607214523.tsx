@@ -157,7 +157,7 @@ const RSVPBox = () => {
         setButtonText("Successful");
         if (formRef.current) formRef.current.reset();
         setAttending(null);
-        // setAttending2(null);
+        setAttending2(null);
       } else {
         // Try to parse JSON error message from server
         let errBody: any = null;

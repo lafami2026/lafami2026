@@ -24,8 +24,8 @@ const RSVPBox = () => {
   const [attending, setAttending] = useState<AttendanceChoice>(null);
   const [showAttendanceError, setShowAttendanceError] = useState(false);
 
-  // const [attending2, setAttending2] = useState<AttendanceChoice>(null);
-  // const [showAttendanceError2, setShowAttendanceError2] = useState(false);
+  const [attending2, setAttending2] = useState<AttendanceChoice>(null);
+  const [showAttendanceError2, setShowAttendanceError2] = useState(false);
 
   //Modal Show
   const [activeModal, setActiveModal] = useState(false);
@@ -157,7 +157,7 @@ const RSVPBox = () => {
         setButtonText("Successful");
         if (formRef.current) formRef.current.reset();
         setAttending(null);
-        // setAttending2(null);
+        setAttending2(null);
       } else {
         // Try to parse JSON error message from server
         let errBody: any = null;

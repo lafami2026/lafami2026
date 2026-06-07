@@ -52,9 +52,7 @@ export async function saveRsvpToSheet(body: SheetForm) {
       body.lastname,
       body.email,
       body.attendingValue,
-      "—",
-      "—",
-      "—",
+      "—"
       // body.gattendingValue,
       // body.gfirstname || "—",
       // body.glastname || "—",

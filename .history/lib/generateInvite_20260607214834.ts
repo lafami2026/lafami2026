@@ -4,13 +4,13 @@ import path from "path";
 
 interface InviteOptions {
   name: string;
-  // guestName?: string;
+
 }
 
 export const generateInvite = async ({
   name,
-}: // guestName,
-InviteOptions): Promise<Uint8Array> => {
+  guestName,
+}: InviteOptions): Promise<Uint8Array> => {
   const templatePath = path.join(process.cwd(), "public", "wedding-invite.pdf");
   const templateBytes: Buffer = fs.readFileSync(templatePath);
 
@@ -20,8 +20,7 @@ InviteOptions): Promise<Uint8Array> => {
 
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
-  // const nameText: string = guestName ? `${name} & ${guestName}` : name;
-  const nameText: string = name;
+  const nameText: string = guestName ? `${name} & ${guestName}` : name;
   const nameSize = 10;
   const nameWidth: number = font.widthOfTextAtSize(nameText, nameSize);
 

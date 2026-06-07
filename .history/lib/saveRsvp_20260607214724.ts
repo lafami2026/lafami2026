@@ -54,7 +54,7 @@ export async function saveRsvpToSheet(body: SheetForm) {
       body.attendingValue,
       "—",
       "—",
-      "—",
+      "—"
       // body.gattendingValue,
       // body.gfirstname || "—",
       // body.glastname || "—",
