@@ -21,12 +21,12 @@ export const generateInvite = async ({
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
   const nameText: string = guestName ? `${name} & ${guestName}` : name;
-  const nameSize = 10;
+  const nameSize = 9;
   const nameWidth: number = font.widthOfTextAtSize(nameText, nameSize);
 
   page.drawText(nameText, {
     // x: (width - nameWidth) / 2,
-    x: width * 0.115,
+    x: width * 0.12,
     y: height * 0.5625, // ← adjust to match your template
     size: nameSize,
     font,

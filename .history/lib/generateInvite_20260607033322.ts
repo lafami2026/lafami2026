@@ -26,7 +26,7 @@ export const generateInvite = async ({
 
   page.drawText(nameText, {
     // x: (width - nameWidth) / 2,
-    x: width * 0.115,
+    x: width * 0.11,
     y: height * 0.5625, // ← adjust to match your template
     size: nameSize,
     font,

@@ -18,7 +18,9 @@ export const generateInvite = async ({
   const page = pdfDoc.getPages()[3];
   const { width, height } = page.getSize();
 
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const fontPath = path.join(process.cwd(), "app", "fonts", "HelveticaNowDisplay-Regular.ttf");
+  const fontBytes = fs.readFileSync(fontPath);
+  const font = await pdfDoc.embedFont(fontBytes);
 
   const nameText: string = guestName ? `${name} & ${guestName}` : name;
   const nameSize = 10;
@@ -26,7 +28,7 @@ export const generateInvite = async ({
 
   page.drawText(nameText, {
     // x: (width - nameWidth) / 2,
-    x: width * 0.115,
+    x: width * 0.11,
     y: height * 0.5625, // ← adjust to match your template
     size: nameSize,
     font,
