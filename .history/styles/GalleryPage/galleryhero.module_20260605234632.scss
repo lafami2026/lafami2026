@@ -1,0 +1,20 @@
+.gallery__hero{
+  width: 100vw;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fandm{
+  width: 70%;
+  display: flex;
+}
