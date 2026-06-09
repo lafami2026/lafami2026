@@ -222,16 +222,16 @@
 }
 
 .phoneinputError {
+  // targets the actual input field the library renders
+  :global(.form-control) {
+    border: 1px solid red !important;
+  }
+
   // targets the flag dropdown on the left
   :global(.flag-dropdown) {
     border-top: 1px solid red !important;
     border-left: 1px solid red !important;
     border-bottom: 1px solid red !important;
-  }
-
-  // targets the actual input field the library renders
-  :global(.form-control) {
-    border: 1px solid red !important;
   }
 }
 

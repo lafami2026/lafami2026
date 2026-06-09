@@ -18,7 +18,7 @@ export type SheetForm = {
   lastname: string;
   email: string;
   attendingValue: string;
-  phone: string
+  phone:
   // gattendingValue: string;
   // gfirstname?: string;
   // glastname?: string;
@@ -60,13 +60,12 @@ export async function saveRsvpToSheet(body: SheetForm) {
       // body.gfirstname || "—",
       // body.glastname || "—",
       formatAsDDMMYYYY_HHMM(new Date()),
-      body.phone.replace(/\s+/g, ""),
     ],
   ];
 
   const res = await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
-    range: "Sheet1!A:I",
+    range: "Sheet1!A:H",
     valueInputOption: "USER_ENTERED",
     requestBody: { values },
   });

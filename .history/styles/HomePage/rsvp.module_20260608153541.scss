@@ -230,7 +230,7 @@
   }
 
   // targets the actual input field the library renders
-  :global(.form-control) {
+  :global(.form-control, input) {
     border: 1px solid red !important;
   }
 }

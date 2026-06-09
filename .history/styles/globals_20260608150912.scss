@@ -231,7 +231,23 @@ html.lenis {
   }
 
   &:focus {
-    border: 1px solid #6f20e1 !important;
+    border-bottom: 1px solid #6f20e1 !important;
+  }
+
+  &:focus ~ .flag-dropdown {
+    border-bottom: 1px solid #6f20e1 !important;
+  }
+
+  &:invalid[focused="true"] {
+    border: 1px solid red !important;
+  }
+
+  &:invalid[focused="true"] ~ .flag-dropdown {
+    border: 1px solid red !important;
+  }
+
+  &:invalid[focused="true"] ~ .conferror {
+    display: block !important;
   }
 }
 
@@ -245,21 +261,6 @@ html.lenis {
   border-bottom: none !important;
 }
 
-.selected-flag {
+.selected-flag{
   padding: 0 1.25rem !important;
-}
-
-//Responsive Design
-@media screen and (max-width: 680px) {
-  .flag-dropdown {
-    height: 54px !important;
-  }
-
-  .form-control {
-    height: 54px !important;
-  }
-
-  .react-tel-input {
-    height: 54px !important;
-  }
 }

@@ -207,7 +207,6 @@ html.lenis {
   outline: none !important;
   background-color: white !important;
   border: none !important;
-  border-radius: 8px;
   // overflow: hidden !important;
 }
 
@@ -227,11 +226,26 @@ html.lenis {
 
   &::placeholder {
     font-size: var(--normal-font-size) !important;
-    color: rgba(0, 0, 0, 0.7);
   }
 
   &:focus {
-    border: 1px solid #6f20e1 !important;
+    border-bottom: 1px solid var(--lightgreen) !important;
+  }
+
+  &:focus ~ .flag-dropdown {
+    border-bottom: 1px solid var(--lightgreen) !important;
+  }
+
+  &:invalid[focused="true"] {
+    border-bottom: 1px solid red !important;
+  }
+
+  &:invalid[focused="true"] ~ .flag-dropdown {
+    border-bottom: 1px solid red !important;
+  }
+
+  &:invalid[focused="true"] ~ .conferror {
+    display: block !important;
   }
 }
 
@@ -245,21 +259,6 @@ html.lenis {
   border-bottom: none !important;
 }
 
-.selected-flag {
+.selected-flag{
   padding: 0 1.25rem !important;
-}
-
-//Responsive Design
-@media screen and (max-width: 680px) {
-  .flag-dropdown {
-    height: 54px !important;
-  }
-
-  .form-control {
-    height: 54px !important;
-  }
-
-  .react-tel-input {
-    height: 54px !important;
-  }
 }

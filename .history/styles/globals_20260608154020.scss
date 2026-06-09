@@ -164,11 +164,11 @@ html.lenis {
 }
 
 .country-list {
-  scrollbar-width: thin !important;
+  // scrollbar-width: thin !important;
 
   &::-webkit-scrollbar {
     display: block !important;
-    width: 16px !important;
+    width: 30px !important;
   }
 
   /* Handle */

@@ -161,17 +161,6 @@ const RSVPBox = () => {
     // const gfirstname = (formData.get("gfirstname") as string) || "";
     // const glastname = (formData.get("glastname") as string) || "";
 
-    // Validate phone number using automatic country detection
-    const phoneNumber = parsePhoneNumber(phone, currentCountry);
-
-    // Check if phone number is valid
-    if (!phoneNumber || !phoneNumber.isValid()) {
-      setPhoneError("Enter a valid phone number.");
-      return;
-    } else {
-      setPhoneError("");
-    }
-
     setButtonText("Sending...");
     setIsSubmitting(true);
 
@@ -186,7 +175,6 @@ const RSVPBox = () => {
           lastname,
           email,
           attendingValue,
-          phone,
           // gattendingValue,
           // gfirstname,
           // glastname,

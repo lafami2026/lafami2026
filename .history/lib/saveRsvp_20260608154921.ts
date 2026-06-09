@@ -66,7 +66,7 @@ export async function saveRsvpToSheet(body: SheetForm) {
 
   const res = await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.GOOGLE_SPREADSHEET_ID,
-    range: "Sheet1!A:I",
+    range: "Sheet1!A:H",
     valueInputOption: "USER_ENTERED",
     requestBody: { values },
   });

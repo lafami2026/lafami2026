@@ -168,7 +168,7 @@ html.lenis {
 
   &::-webkit-scrollbar {
     display: block !important;
-    width: 16px !important;
+    width: 30px !important;
   }
 
   /* Handle */
@@ -233,6 +233,7 @@ html.lenis {
   &:focus {
     border: 1px solid #6f20e1 !important;
   }
+
 }
 
 .flag-dropdown {
@@ -249,17 +250,16 @@ html.lenis {
   padding: 0 1.25rem !important;
 }
 
+
 //Responsive Design
 @media screen and (max-width: 680px) {
   .flag-dropdown {
-    height: 54px !important;
-  }
-
-  .form-control {
-    height: 54px !important;
-  }
-
-  .react-tel-input {
-    height: 54px !important;
+    height: 60px !important;
+    outline: none !important;
+    background-color: transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
   }
 }

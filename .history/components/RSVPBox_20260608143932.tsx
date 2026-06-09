@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import FormInput from "./FormInput";
+
 import DoubleLove2 from "@/utils/Icons/DoubleLove2";
+
 import AttendanceRadio from "./AttendanceRadio";
 import Success from "@/utils/Icons/Success";
 import { AnimatePresence } from "framer-motion";
@@ -12,13 +14,6 @@ import styles from "../styles/HomePage/rsvp.module.scss";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import parsePhoneNumber, { CountryCode } from "libphonenumber-js";
-
-interface CountryData {
-  countryCode: string;
-  dialCode: string;
-  format?: string;
-  name: string;
-}
 
 const RSVPBox = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -34,45 +29,6 @@ const RSVPBox = () => {
 
   // const [attending2, setAttending2] = useState<AttendanceChoice>(null);
   // const [showAttendanceError2, setShowAttendanceError2] = useState(false);
-
-  const [phoneError, setPhoneError] = useState("");
-
-  //Managing Country codes
-  const [currentCountry, setCurrentCountry] = useState<CountryCode>("CM");
-
-  const [focused, setFocused] = useState(false);
-
-  useEffect(() => {
-    if (isSubmitting) {
-      setFocused(false);
-    }
-  }, [isSubmitting]);
-
-  const handleFocus = () => {
-    if (!isSubmitting) {
-      // Skip onBlur during form reset/submission
-      setFocused(true);
-    }
-  };
-
-  // Validate phone number in real-time
-  const handlePhoneChange = (phoneValue: string, country: CountryData) => {
-    // Update current country (libphonenumber-js expects uppercase 2-letter ISO)
-    if (country?.countryCode) {
-      setCurrentCountry(country.countryCode.toUpperCase() as CountryCode);
-    }
-
-    const phoneNumber = parsePhoneNumber(
-      phoneValue,
-      (country?.countryCode?.toUpperCase() as CountryCode) ?? currentCountry
-    );
-
-    if (phoneNumber && phoneNumber.isValid()) {
-      setPhoneError("");
-    } else {
-      setPhoneError("Enter a valid phone number.");
-    }
-  };
 
   //Modal Show
   const [activeModal, setActiveModal] = useState(false);
@@ -156,21 +112,9 @@ const RSVPBox = () => {
     const lastname = (formData.get("lastname") as string) || "";
     const email = (formData.get("email") as string) || "";
     const attendingValue = attending === "yes" ? "Yes" : "No";
-    const phone = formData.get("phone") as string;
     // const gattendingValue = attending2 === "yes" ? "Yes" : "No";
     // const gfirstname = (formData.get("gfirstname") as string) || "";
     // const glastname = (formData.get("glastname") as string) || "";
-
-    // Validate phone number using automatic country detection
-    const phoneNumber = parsePhoneNumber(phone, currentCountry);
-
-    // Check if phone number is valid
-    if (!phoneNumber || !phoneNumber.isValid()) {
-      setPhoneError("Enter a valid phone number.");
-      return;
-    } else {
-      setPhoneError("");
-    }
 
     setButtonText("Sending...");
     setIsSubmitting(true);
@@ -186,7 +130,6 @@ const RSVPBox = () => {
           lastname,
           email,
           attendingValue,
-          phone,
           // gattendingValue,
           // gfirstname,
           // glastname,
@@ -254,27 +197,6 @@ const RSVPBox = () => {
           {firstThree.map((data, i) => (
             <FormInput data={data} key={`fs${i}`} isSubmitting={isSubmitting} />
           ))}
-          <div
-            className={`${styles.phoneinput} ${
-              phoneError ? styles.phoneinputError : ""
-            }`}
-          >
-            <span className={styles.label}>Phone Number*</span>
-            <PhoneInput
-              country={"cm"}
-              onChange={handlePhoneChange} // pass the phone value directly
-              inputProps={{
-                name: "phone",
-                required: true,
-                placeholder: "+237 690 000 000",
-              }}
-              onBlur={handleFocus}
-              data-focused={focused.toString()}
-            />
-            {phoneError === "Enter a valid phone number." && (
-              <span className={styles.error}>Enter a valid phone number.</span>
-            )}
-          </div>
           <AttendanceRadio
             attending={attending}
             setAttending={setAttending}
