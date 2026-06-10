@@ -133,7 +133,7 @@ const RSVPBox = () => {
     // },
   ];
 
-  const firstThree = FormFields.slice(0, 2); // Gets the first 3 items
+  const firstThree = FormFields.slice(0, 3); // Gets the first 3 items
   // const lastFields = FormFields.slice(3, 5);
 
   const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
@@ -154,7 +154,7 @@ const RSVPBox = () => {
     const formData = new FormData(event.currentTarget);
     const firstname = (formData.get("firstname") as string) || "";
     const lastname = (formData.get("lastname") as string) || "";
-    // const email = (formData.get("email") as string) || "";
+    const email = (formData.get("email") as string) || "";
     const attendingValue = attending === "yes" ? "Yes" : "No";
     const phone = formData.get("phone") as string;
     // const gattendingValue = attending2 === "yes" ? "Yes" : "No";
@@ -184,7 +184,7 @@ const RSVPBox = () => {
         body: JSON.stringify({
           firstname,
           lastname,
-          // email,
+          email,
           attendingValue,
           phone,
           // gattendingValue,

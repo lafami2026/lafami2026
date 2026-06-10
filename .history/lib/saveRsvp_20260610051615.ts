@@ -16,9 +16,9 @@ function formatAsDDMMYYYY_HHMM(date: Date): string {
 export type SheetForm = {
   firstname: string;
   lastname: string;
-  // email: string;
+  email: string;
   attendingValue: string;
-  phone: string;
+  phone: string
   // gattendingValue: string;
   // gfirstname?: string;
   // glastname?: string;
@@ -52,7 +52,7 @@ export async function saveRsvpToSheet(body: SheetForm) {
       body.firstname,
       body.lastname,
       // body.email,
-      "—",
+      
       body.attendingValue,
       "—",
       "—",

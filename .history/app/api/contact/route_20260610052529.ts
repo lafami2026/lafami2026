@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const body = (await req.json()) as SheetForm;
 
     // Basic validation
-    if (!body.firstname || !body.lastname || !body.phone || !body.attendingValue) {
+    if (!body.firstname || !body.lastname || !body.phone || !body.phone) {
       return new Response(
         JSON.stringify({ message: "Missing required fields" }),
         { status: 400, headers: { "Content-Type": "application/json" } }

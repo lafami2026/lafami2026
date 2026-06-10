@@ -16,7 +16,7 @@ function formatAsDDMMYYYY_HHMM(date: Date): string {
 export type SheetForm = {
   firstname: string;
   lastname: string;
-  // email: string;
+  email: string;
   attendingValue: string;
   phone: string;
   // gattendingValue: string;
