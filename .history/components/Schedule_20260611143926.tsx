@@ -251,7 +251,7 @@ const Schedule = ({ scRef }: { scRef: RefObject<HTMLDivElement | null> }) => {
               </div>
               <div className={styles.swb__one}>
                 <div className={styles.timeline}>
-                  <span className={styles.timer}>6:00 PM</span>
+                  <span className={styles.timer}>6:30 PM</span>
                   <div className={styles.line}></div>
                 </div>
                 <p className={styles.pbot}>Reception</p>
